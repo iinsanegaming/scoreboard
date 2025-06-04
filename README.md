@@ -3,7 +3,7 @@
 
 
 
-This is a Scoreboard that will show your players First and Last name, Job, and the Citizens ID. Also will show how many Lawnman and Medics you have on-duty.
+This is a Scoreboard that will show your players First and Last name, Job, and the Citizens ID. Also will show how many Lawnman and Medics you have on-duty. To be able to see the scoreboard use the command /scoreboard
 ## Authors
 
 - [@iinsanegaming](https://www.github.com/iinsanegaming)
