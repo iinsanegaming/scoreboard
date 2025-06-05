@@ -8,24 +8,15 @@
 <body>
   <div id="scoreboard">
     <div class="header">
-      <h2>Secret Society County</h2>
+      <h2 id="scoreboardTitle">Tablón de Cazadores</h2>
     </div>
 
     <div class="scoreboard-body">
-      <div class="sidebar">
-        <div class="duty-count">
-          <span class="label">👮 Lawmen</span>
-          <span id="lawmenCount" class="value">0</span>
-        </div>
-        <div class="duty-count">
-          <span class="label">🩺 Medics</span>
-          <span id="medicCount" class="value">0</span>
-        </div>
-      </div>
+      <div id="sidebar" class="sidebar"></div>
 
       <div class="main">
         <table>
-          <thead>
+          <thead id="playerTableHeader">
             <tr>
               <th style="width: 10%;">ID</th>
               <th style="width: 25%;">Name</th>
@@ -33,6 +24,11 @@
             </tr>
           </thead>
           <tbody id="playerList"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" id="playerTotal" style="text-align: center; color: #888; font-size: 0.9em;"></td>
+            </tr>
+          </tfoot>
         </table>
       </div>
     </div>
