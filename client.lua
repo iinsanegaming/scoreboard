@@ -17,8 +17,11 @@ AddEventHandler('scoreboard:update', function(data)
     SendNUIMessage({
         type = "update",
         players = data.players,
+        viewerPerms = data.viewerPerms,
+        total = data.total,
         lawmen = data.lawmen,
-        medics = data.medics
+        medics = data.medics,
+        msg = data.msg
     })
 end)
 
@@ -27,14 +30,4 @@ RegisterNUICallback('hideUI', function(_, cb)
     SetNuiFocus(false, false)
     SendNUIMessage({ type = "toggle", display = false })
     cb({})
-end)
-
-RegisterNetEvent('scoreboard:update')
-AddEventHandler('scoreboard:update', function(data)
-    SendNUIMessage({
-        type = "update",
-        players = data.players,
-        lawmen = data.lawmen,
-        medics = data.medics
-    })
 end)
