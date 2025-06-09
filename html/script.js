@@ -1,5 +1,3 @@
-document.body.style.display = 'none';
-
 function createSidebar() {
     const sidebar = document.getElementById('sidebar');
     sidebar.innerHTML = ''; // Limpia el contenido previo
@@ -31,13 +29,13 @@ function createSidebar() {
 // Crear sidebar desde el inicio
 createSidebar();
 
+document.getElementById('scoreboard').style.display = 'none';
 window.addEventListener('message', function (event) {
     const data = event.data;
 
     if (data.type === 'toggle') {
-        document.body.style.display = data.display ? 'block' : 'none';
+        document.getElementById('scoreboard').style.display = data.display ? 'block' : 'none';
     }
-
     if (data.type === 'update') {
         // Actualizar lista de jugadores
         const list = document.getElementById('playerList');
